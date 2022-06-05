@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Tailwind from "./Tailwind.svelte";
+	import { Tailwind, Component } from "@diagrams/ux";
 
 	export let name: string;
 </script>
@@ -26,5 +26,6 @@
 	<h1>Hello {name} from the <span class="text-7xl">Svelte</span> Tailwind Nx template!</h1>
 	<div>
 		<span class="example">Example goes here</span>
-	</div>
+  </div>
+  <Component name="Matt" />
 </main>

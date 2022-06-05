@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "obsidian-plugin": "apps/obsidian-plugin",
-    "obsidian-plugin-e2e": "apps/obsidian-plugin-e2e"
+    "obsidian-plugin-e2e": "apps/obsidian-plugin-e2e",
+    "ux": "libs/ux"
   }
 }
