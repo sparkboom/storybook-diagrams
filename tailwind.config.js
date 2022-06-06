@@ -22,7 +22,12 @@ module.exports = {
    */
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        '32': 'repeat(32, minmax(0, 1fr))',
+        '34': 'repeat(34, minmax(0, 1fr))',
+      }
+    },
   },
   variants: {
     extend: {},

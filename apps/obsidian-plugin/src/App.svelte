@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Tailwind, TestComponent } from "@diagrams/ux";
+	import { Tailwind, ProtocolTable } from "@diagrams/ux";
 
 	export let name: string;
 </script>
@@ -27,5 +27,5 @@
 	<div>
 		<span class="example">Example goes here</span>
   </div>
-  <TestComponent />
+  <ProtocolTable title="UDP Packets" />
 </main>

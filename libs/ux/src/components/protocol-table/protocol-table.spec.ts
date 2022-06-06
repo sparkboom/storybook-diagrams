@@ -1,8 +1,8 @@
-import TestComponent from './TestComponent.svelte'
+import ProtocolTable from './ProtocolTable.svelte'
 import { render } from '@testing-library/svelte'
 
 it('it works', async () => {
-  const { getByText } = render(TestComponent)
+  const { getByText } = render(ProtocolTable)
 
   expect(getByText('Hello component!'));
 })
