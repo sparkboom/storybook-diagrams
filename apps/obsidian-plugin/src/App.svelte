@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Tailwind, Component } from "@diagrams/ux";
+	import { Tailwind, TestComponent } from "@diagrams/ux";
 
 	export let name: string;
 </script>
@@ -27,5 +27,5 @@
 	<div>
 		<span class="example">Example goes here</span>
   </div>
-  <Component name="Matt" />
+  <TestComponent />
 </main>
