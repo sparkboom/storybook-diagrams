@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "start": "nx run obsidian-plugin:serve",
     "build": "nx build",
     "test": "nx test"
   },
@@ -19,6 +19,7 @@
     "@nrwl/workspace": "14.1.9",
     "@nxext/svelte": "^14.0.0",
     "@storybook/addon-essentials": "~6.4.12",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/core-server": "~6.4.12",
     "@storybook/svelte": "~6.4.12",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.41",

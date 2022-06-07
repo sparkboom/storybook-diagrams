@@ -1,6 +1,7 @@
+// const util = require('util');
 const rootMain = require('../../../.storybook/main');
 
-module.exports = {
+const storybookConfig = {
   ...rootMain,
 
   stories: [
@@ -16,7 +17,10 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
-
+    // console.log(util.inspect(config, { showHidden: false, depth: null, colors: true }));
     return config;
   },
 };
+// console.log(util.inspect(storybookConfig, { showHidden: false, depth: null, colors: true }));
+
+module.exports = storybookConfig;
