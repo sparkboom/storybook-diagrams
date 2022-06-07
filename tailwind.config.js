@@ -13,7 +13,11 @@ module.exports = {
     options: {
       rejected: true,
       printRejected: true,
-      safelist: ['html', 'body', 'dark'],
+      safelist: [
+        'html',
+        'body',
+        'dark',
+      ],
       safelistPatterns: [/svelte-/],
     },
   },
@@ -26,11 +30,19 @@ module.exports = {
       gridTemplateColumns: {
         '32': 'repeat(32, minmax(0, 1fr))',
         '34': 'repeat(34, minmax(0, 1fr))',
+      },
+      gridColumn: {
+        'span-16': 'span 16 / span 16',
       }
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+    }
+  ],
 };

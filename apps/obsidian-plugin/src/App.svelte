@@ -27,5 +27,5 @@
 	<div>
 		<span class="example">Example goes here</span>
   </div>
-  <ProtocolTable title="UDP Packets" />
+  <ProtocolTable title="UDP Packets" sections="Source Port,16|Destination Port,16|Length,16|Checksum,16" />
 </main>
