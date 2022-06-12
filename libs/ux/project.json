@@ -1,0 +1,61 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ux/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ux/**/*.{ts,svelte,spec.ts}"]
+      }
+    },
+    "check": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "svelte-check",
+        "cwd": "libs/ux"
+      }
+    },
+    "test": {
+      "executor": "@nxext/vitest:vitest",
+      "options": {
+        "command": "run"
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/svelte",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/ux/.storybook"
+        },
+        "projectBuildConfig": "ux:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/svelte",
+        "outputPath": "dist/storybook/ux",
+        "config": {
+          "configFolder": "libs/ux/.storybook"
+        },
+        "projectBuildConfig": "ux:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    }
+  }
+}

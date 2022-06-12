@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "obsidian-plugin": "apps/obsidian-plugin",
+    "obsidian-plugin-e2e": "apps/obsidian-plugin-e2e",
+    "ux": "libs/ux",
+    "ux-e2e": "apps/ux-e2e"
+  }
+}
